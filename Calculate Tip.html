@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function CalculateTip(baseAmount,TipPercentages){
+               console.log(baseAmount,TipPercentages)
+             let result=[];
+            for(let i=0;i<TipPercentages.length;i++){
+                console.log(TipPercentages[i])
+                let tipAmount=baseAmount*(TipPercentages[i]/100)
+                tipAmount=tipAmount.toFixed(2);
+                const formatter=Intl.NumberFormat("en-IN",{
+                    style:"currency",
+                    currency:"INR"
+                })
+                result.push(formatter.format(tipAmount))
+            }
+            return result;
+
+        }
+           console.log(CalculateTip(1000,[5,10,15]))
+           //Guess Number
+           let input=prompt("please guess the correct number")
+          console.log(input)
+          let correctnumber=20
+            if(input==correctnumber){
+        console.log("Congratulation you are winner")
+         
+          }
+          else if(input>correctnumber){
+            console.log("It is a Largest Number")
+          }
+           else if(input<correctnumber){
+            console.log("It is a Smallest Number")
+          }
+          else{
+        console.log("It is wrong Number" )
+          }
+    </script>
+</body>
+</html>

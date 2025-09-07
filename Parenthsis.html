@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Parenthses={
+            "{":"}",
+            "(":")",
+            "[":"]"
+           }
+           console.log(Parenthses["{"])
+           function isbalanced(input){
+            console.log(input)
+            const array=[]
+            for(let char of input){
+                if(Parenthses[char]){
+                     array.push(char);
+                }
+                else if(char===")"||char==="}"||char==="]"){
+                    const lastParenthses=array.pop();
+                    if(Parenthses[lastParenthses]!==char){
+                        return false;
+                    }
+                }
+            }
+ return array.length === 0;
+           }
+           console.log('{[()]}', isbalanced('{[()]}'));
+
+           console.log('{[(])}', isbalanced('{[(])}'));
+
+           console.log('{[]', isbalanced('{[]'));
+
+    </script>
+</body>
+</html>
