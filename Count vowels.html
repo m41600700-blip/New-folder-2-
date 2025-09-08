@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function countvowels(string){
+        
+          const vowel="aeiou"
+          const consonents="bcdfghjklmnpqrstvwxyz"
+          let vowelcount=0;
+          let consonentscount=0;
+         for (let i=0; i<string.length;i++){
+          console.log(string[i])
+          if(vowel.includes (string[i]) ){
+            vowelcount++;
+
+          }else if(consonents.includes (string[i])){
+            consonentscount++;
+        
+
+          }else{ console.log(inputString[i], "Is neither vowel nor consonant");}
+        }
+        return {vowelcount,consonentscount};
+
+      }
+      console.log(countvowels('madam'))
+    </script>
+</body>
+</html>
