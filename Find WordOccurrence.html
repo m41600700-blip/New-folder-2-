@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const bigstring="This is a big string with the word big repeated in the big string"
+        const findword="big"
+       // console.log(string.indexOf("big" ))
+        //console.log(string.indexOf("big",11 ))
+        function Occurences(big,word){
+            const result=[];
+        let index=big.indexOf(word);
+        while(index!==-1){
+            result.push(index)
+            index=big.indexOf(word,index+1);
+        }    
+        return (result)
+        }
+        
+console.log(Occurences(bigstring, findword));
+console.log(Occurences(bigstring, "ashish"));
+
+   
+    </script>
+     </body>
+</html>
