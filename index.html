@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div class="container">
+    <div class="img-box">
+        <img src="" alt="" width="100%">
+        <div class="img-wrap">
+        <img src="" alt="" id="originalimg">    
+        </div>
+        <span id="line">
+            <img src="" class="arrow">
+        </span>
+    </div>
+   </div> 
+</body>
+<script>
+let imgbox=document.querySelector(".img-box") 
+let imgwrap=document.querySelector(".img-wrap")
+let originalimg=document.getElementById("originalimg")
+let line=document.getElementById("line")
+originalimg.style.width=imgbox.offsetWidth+"px" 
+let leftspace= imgbox.offsetLeft;
+imgbox.onmousemove=function(e){
+   let boxwidth= e.pageX-leftspace+"px";
+   imgwrap.style.width=boxwidth;
+   line.style.left=boxwidth
+
+}
+ 
+</script>
+</html>
