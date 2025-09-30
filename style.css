@@ -1,7 +1,6 @@
 *{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    padding: 0%;
 }
 .container{
     width: 100%;
@@ -15,11 +14,12 @@
     width: 60%;
     margin: auto;
     line-height: 0;
-    background-image: url();
+    background-image: url(background.png);
     overflow: hidden;
     position: relative;
 }
 .img-wrap{
+    width: 20px;
      position: absolute;
      left: 0;
      top: 0; 
