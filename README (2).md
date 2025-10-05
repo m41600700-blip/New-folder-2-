@@ -60,7 +60,7 @@ Here are some related projects
         }
 
     },1000)
-}
+
 ```
 
 
