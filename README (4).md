@@ -54,7 +54,6 @@ Here are some related projects
               displaytime.innerHTML="00:00:00"
 
         }
-}
 ```
 
 
