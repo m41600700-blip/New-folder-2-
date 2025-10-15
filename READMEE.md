@@ -1,9 +1,21 @@
 
-# How To Make Text To Voice Converter Using JavaScript | Text To Speech Generator
+#  A Popup Using HTML, CSS And JavaScript | Create a Modal Box In HTML Website
 
-🗣️ Project Description
+📝 Description:
 
-Learn how to build a Text To Voice Converter (also known as a Text-to-Speech Generator) using HTML, CSS, and JavaScript. This beginner-friendly project demonstrates how to convert written text into spoken words directly in your web browser — without any external APIs or libraries!
+In this tutorial, you’ll learn how to create a Popup Modal Box using HTML, CSS, and JavaScript step by step. A modal box (popup window) is a great way to grab user attention for alerts, messages, or login forms without leaving the current page.
+
+We’ll design a clean and modern popup box with CSS and make it functional with simple JavaScript — no external libraries needed!
+
+By the end of this video, you’ll understand how to:
+
+✅ Build a popup modal structure with HTML
+
+✅ Style it beautifully using CSS
+
+✅ Open and close it dynamically with JavaScript
+
+✅ Add overlay effects and smooth animations
 
 
 ## Acknowledgements
@@ -15,46 +27,19 @@ Learn how to build a Text To Voice Converter (also known as a Text-to-Speech Gen
 
 ## Appendix
 
-💡 How It Works
+In this project, you’ll learn how to create a Popup Modal Box (also known as a dialog box) using HTML, CSS, and JavaScript. A popup or modal box is a small window that appears on top of the current webpage to display messages, forms, or notifications without navigating away from the page.
 
-* User types text into the textarea.
+This simple yet powerful feature enhances user interaction and is commonly used for login forms, alert messages, subscription boxes, or confirmation dialogs.
 
-* JavaScript retrieves available voices from the system using speechSynthesis.getVoices().
 
-* When the user clicks “Speak,” the app creates a new SpeechSynthesisUtterance() object and plays it.
+## Documentation
 
-* Users can control rate and pitch to customize the speech output.
+[Documentation](https://linktodocumentation)
 
 
 ## Related
 
-⚙️ Example Code (Core Logic)
-const speech = new SpeechSynthesisUtterance();
-const voicesList = document.querySelector("#voices");
-const textarea = document.querySelector("#text");
-const rate = document.querySelector("#rate");
-const pitch = document.querySelector("#pitch");
-const btn = document.querySelector("#speak");
-
-speech.text = "Hello!";
-
-speechSynthesis.onvoiceschanged = () => {
-  let voices = speechSynthesis.getVoices();
-  voices.forEach((voice, i) => {
-    voicesList.options[i] = new Option(voice.name, i);
-  });
-};
-
-voicesList.addEventListener("change", () => {
-  speech.voice = speechSynthesis.getVoices()[voicesList.value];
-});
-
-btn.addEventListener("click", () => {
-  speech.text = textarea.value;
-  speech.rate = rate.value;
-  speech.pitch = pitch.value;
-  speechSynthesis.speak(speech);
-});
+Here are some related projects
 
 [Awesome README](https://github.com/matiassingers/awesome-readme)
 
@@ -62,24 +47,34 @@ btn.addEventListener("click", () => {
 ## Usage/Examples
 
 ```javascript
-let speech=new SpeechSynthesisUtterance();
-        let voices=[];
-        let voiceSelect=document.querySelector("select");
-        window.speechSynthesis.onvoiceschanged=()=>{
-            voices=window.speechSynthesis.getVoices();
-            speech.voice=voices[0];
+import Component from 'my-project'
 
-            voices.forEach((voice,i) => (voiceSelect.options[i]= new Option(voice.name,i)));
-        };
-        voiceSelect.addEventListener("change",()=>{
-            speech.voice= voices[voiceSelect.value];
-        });
-
-
-        document.querySelector("button").addEventListener("click",()=>{
-            speech.text=document.querySelector("textarea").value;
-            window.speechSynthesis.speak(speech);
-        })
+function App() {
+  return <Component />
 }
 ```
+
+
+## Optimizations
+
+What optimizations did you make in your code? E.g. refactors, performance improvements, accessibility
+
+
+## Screenshots
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+
+## 🛠 Skills
+Javascript, HTML, CSS...
+
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
+
+
+## 🚀 About Me
+I'm a full stack developer...
 
